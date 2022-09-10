@@ -1,33 +1,52 @@
 public class Main {
     public static void main(String[] args) {
 
-        int [] numbers = {1, 3, 5, 7, 9};
-
-        System.out.println(numbers[2]);
-
         String[] artists = {"Raphael", "da Vinci", "Picasso", "Meonet", "Hopper", "Munch"};
-        boolean[] valid = {false, false, true, false, true, true};
+        int newNumber = 6;
 
-        double[][] prices = {{11.11, 12.12, 13.13, 14.14},
-                            {21.21, 22.22, 23.23, 24.24},
-                            {31.31, 32.32, 33.33, 34.34}};
+        printMyName();
 
-        /*System.out.println("The price of 2nd row 3rd column is " + prices[1][2]);
+        newNumber += incrementOne();
+        System.out.println(newNumber);
 
-        for (int i = 0; i < artists.length; i++){
-            for (int j = 0; j < prices[i].length; j++){
-                System.out.print(prices[i][j] + " ");
-            }
-            System.out.println();
-        }*/
-
-        for (int i = 0; i < artists.length; i++){
-            for (int j = 0; j < artists[i].length(); j++) {
-                if (artists[i].charAt(j) == 'p' || artists[i].charAt(j) == 'P'){
-                    System.out.println(artists[i]);
-                    break;
-                }
-            }
+        for (String nameOfArtist : artists) {
+            printAnyName(nameOfArtist);
         }
+
+        System.out.println("The sum of two numbers is " + addNumbers(5, 9));
+        System.out.println("The sum of two numbers is " + addNumbers(3));
+        System.out.println("The sum of two numbers is " + addNumbers(11.34f, 23.45f));
+
+    }
+
+    static void printMyName(){
+        System.out.println("----------------------");
+        System.out.println("My name is Alvaro");
+        System.out.println("----------------------");
+    }
+
+    static int incrementOne(){
+        int number = 0;
+        number++;
+        System.out.println("Incrementing...");
+        return number;
+    }
+
+    static void printAnyName(String name){
+        System.out.println("-------------");
+        System.out.println("My name is " + name);
+        System.out.println("-------------");
+    }
+
+    static int addNumbers(int xInt, int yInt){
+        return xInt + yInt;
+    }
+
+    static int addNumbers(int xInt){
+        return xInt + 100;
+    }
+
+    static float addNumbers(float xFloat, float yFloat){
+        return xFloat + yFloat;
     }
 }
