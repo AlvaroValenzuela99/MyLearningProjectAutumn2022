@@ -12,13 +12,22 @@ public class Main {
                             {21.21, 22.22, 23.23, 24.24},
                             {31.31, 32.32, 33.33, 34.34}};
 
-        System.out.println("The price of 2nd row 3rd column is " + prices[1][2]);
+        /*System.out.println("The price of 2nd row 3rd column is " + prices[1][2]);
 
         for (int i = 0; i < artists.length; i++){
             for (int j = 0; j < prices[i].length; j++){
                 System.out.print(prices[i][j] + " ");
             }
             System.out.println();
+        }*/
+
+        for (int i = 0; i < artists.length; i++){
+            for (int j = 0; j < artists[i].length(); j++) {
+                if (artists[i].charAt(j) == 'p' || artists[i].charAt(j) == 'P'){
+                    System.out.println(artists[i]);
+                    break;
+                }
+            }
         }
     }
 }
