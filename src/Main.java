@@ -8,12 +8,17 @@ public class Main {
         String[] artists = {"Raphael", "da Vinci", "Picasso", "Meonet", "Hopper", "Munch"};
         boolean[] valid = {false, false, true, false, true, true};
 
-        System.out.println("Length of artists array: " + artists.length);
+        double[][] prices = {{11.11, 12.12, 13.13, 14.14},
+                            {21.21, 22.22, 23.23, 24.24},
+                            {31.31, 32.32, 33.33, 34.34}};
+
+        System.out.println("The price of 2nd row 3rd column is " + prices[1][2]);
 
         for (int i = 0; i < artists.length; i++){
-            if (valid[i]){
-                System.out.println(artists[i]);
+            for (int j = 0; j < prices[i].length; j++){
+                System.out.print(prices[i][j] + " ");
             }
+            System.out.println();
         }
     }
 }
