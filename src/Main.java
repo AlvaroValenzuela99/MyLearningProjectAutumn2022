@@ -1,26 +1,32 @@
 public class Main {
     public static void main(String[] args) {
 
-        int x = 4;
-        int y = 5;
+        int dayOfWeek = 3;
 
-        int sum;
-
-        sum = x + y;
-
-        System.out.println(sum);
-        System.out.println("Sum of " + x + " and " + y + " equals " + sum);
-
-        if (sum == 9 || y == 5){
-            System.out.println("Sum is 9");
+        switch (dayOfWeek){
+            case 1:
+                System.out.println("Its Monday!");
+                break;
+            case 2:
+                System.out.println("Its Tuesday!");
+                break;
+            case 3:
+                System.out.println("Its Wednesday!");
+                break;
+            case 4:
+                System.out.println("Its Thursday!");
+                break;
+            case 5:
+                System.out.println("Its Friday!");
+                break;
+            case 6:
+                System.out.println("Its Saturday!");
+                break;
+            case 7:
+                System.out.println("Its Sunday!");
+                break;
+            default:
+                System.out.println("We have only 7 daus in a week");
         }
-        else if (sum <= 8){
-            System.out.println("Sum is less than or equal to 8");
-        }
-        else {
-            System.out.println("We're not so good. :(");
-        }
-
-        System.out.println("The new value of the sum is " + sum);
     }
 }
