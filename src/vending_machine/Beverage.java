@@ -5,6 +5,24 @@ public class Beverage {
     boolean isHot;
     boolean isSparkling;
 
+    Beverage(){
+        name = "beverage";
+        isHot = false;
+        isSparkling = false;
+    }
+
+    Beverage(String beverageName, boolean isBeverageHot, boolean isBeverageSparkling){
+        name = beverageName;
+        isHot = isBeverageHot;
+        isSparkling = isBeverageSparkling;
+    }
+
+    Beverage(String beverageName){
+        name = beverageName;
+        isHot = false;
+        isSparkling = false;
+    }
+
     void print(){
         System.out.println("-------------------");
         System.out.println(name);
