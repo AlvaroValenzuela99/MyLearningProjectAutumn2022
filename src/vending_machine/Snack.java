@@ -52,4 +52,7 @@ public class Snack {
         return weight * caloriesPerHundredGrams / 100;
     }
 
+    public double getCaloriesForSnack(){
+        return calculateCalories();
+    }
 }

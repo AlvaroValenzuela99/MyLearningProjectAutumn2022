@@ -5,13 +5,13 @@ public class Beverage {
     boolean isHot;
     boolean isSparkling;
 
-    Beverage(){
+    public Beverage(){
         name = "beverage";
         isHot = false;
         isSparkling = false;
     }
 
-    Beverage(String beverageName, boolean isBeverageHot, boolean isBeverageSparkling){
+    public Beverage(String beverageName, boolean isBeverageHot, boolean isBeverageSparkling){
         name = beverageName;
         isHot = isBeverageHot;
         isSparkling = isBeverageSparkling;
