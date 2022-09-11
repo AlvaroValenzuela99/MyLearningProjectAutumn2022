@@ -1,39 +1,37 @@
 package vending_machine;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class VendingMachineMain {
-    static final int MAX_BEVERAGES = 10;
     public static void main(String[] args) {
 
-        ArrayList<Beverage> beverages = new ArrayList<>();
-        ArrayList<Snack> snacks = new ArrayList<>();
+     ArrayList<Snack> snacks = new ArrayList<>();
+     String name;
+     int caloriesPerHundredGrams;
+     double weight;
+     int MAX_SNACKS = 5;
+        for (int i = 0; i < MAX_SNACKS; i++) {
+            do {
+                Scanner scanner = new Scanner(System.in);
+                System.out.println("Please enter the name of the snack: ");
+                name = scanner.nextLine();
+                System.out.println("Please enter the calories per 100g of the snack: ");
+                caloriesPerHundredGrams = scanner.nextInt();
+                System.out.println("Please enter the weight of the snack: ");
+                weight = scanner.nextDouble();
+            }while(caloriesPerHundredGrams < 0 || weight <= 0);
+            snacks.add(new Snack(name, caloriesPerHundredGrams, weight));
+            System.out.println("Success...");
 
-        printAmountOfArrayListElements(beverages);
-
-        for (int i = 0; i < MAX_BEVERAGES; i++) {
-            Scanner scanner = new Scanner(System.in);
-            String newName;
-            boolean newIsHot, newIsSparkling;
-            System.out.print("Please enter drink name: ");
-            newName = scanner.nextLine();
-            System.out.print("\nIs it hot?: ");
-            newIsHot = scanner.nextBoolean();
-            System.out.print("\nIs it sparkling?: ");
-            newIsSparkling = scanner.nextBoolean();
-            beverages.add(new Beverage(newName, newIsHot, newIsSparkling));
+            // se pone la unidad que vamos a ir sacando (con el nombre que queramos a la unidad, en este caso s) : de donde lo sacamos iterando (el array completo)
+            for (Snack s : snacks) {
+                s.print();
+            }
         }
-
-        printAmountOfArrayListElements(beverages);
-
-        for (Beverage beverage : beverages) {
-            beverage.print();
-        }
-
 
     }
-
     static void printAmountOfArrayListElements(ArrayList list){
         System.out.println("Number of elements in beverages array list: " + list.size());
     }
