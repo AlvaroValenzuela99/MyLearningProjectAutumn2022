@@ -23,6 +23,30 @@ public class Beverage {
         isSparkling = false;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public boolean isHot() {
+        return isHot;
+    }
+
+    public void setHot(boolean hot) {
+        isHot = hot;
+    }
+
+    public boolean isSparkling() {
+        return isSparkling;
+    }
+
+    public void setSparkling(boolean sparkling) {
+        isSparkling = sparkling;
+    }
+
     void print(){
         System.out.println("-------------------");
         System.out.println(name);

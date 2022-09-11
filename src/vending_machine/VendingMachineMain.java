@@ -1,24 +1,19 @@
 package vending_machine;
 
+import java.util.ArrayList;
+
 public class VendingMachineMain {
     public static void main(String[] args) {
 
-        Beverage defaultBeverage = new Beverage();
-        defaultBeverage.print();
+        ArrayList<Beverage> beverages = new ArrayList<>();
 
-        Beverage coffee = new Beverage("Coffee", true, false);
-        coffee.print();
+        System.out.println("Number of elements in beverages array list: " + beverages.size());
+        Beverage beverage = new Beverage();
+        beverages.add(beverage);
+        System.out.println("Number of elements in beverages array list: " + beverages.size());
+    }
 
-        Beverage drink = new Beverage("water");
-        drink.print();
-
-        Beverage evianSparkling = new Beverage("water", false, true);
-        evianSparkling.print();
-
-        Snack defaultSnack = new Snack();
-        defaultSnack.print();
-
-        Snack chocolateBar = new Snack("Twix", 300, 70);
-        chocolateBar.print();
+    static void printAmountOfBeverages(){
+        System.out.println("Number of elements in beverages array list: " + beverages.size());
     }
 }

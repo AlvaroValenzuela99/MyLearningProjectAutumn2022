@@ -16,6 +16,30 @@ public class Snack {
         this.weight = weight;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getCaloriesPerHundredGrams() {
+        return caloriesPerHundredGrams;
+    }
+
+    public void setCaloriesPerHundredGrams(int caloriesPerHundredGrams) {
+        this.caloriesPerHundredGrams = caloriesPerHundredGrams;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
     void print(){
         System.out.println("-----------------");
         System.out.println(name);
